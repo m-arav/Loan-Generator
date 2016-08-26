@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem "rspec-rails", "3.5.1"
+gem "rspec-rails", "3.5.2"
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
