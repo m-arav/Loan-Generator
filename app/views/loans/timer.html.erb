@@ -1,0 +1,15 @@
+<h1 class="text-center"> Please Wait </h1>
+<div class="progress text-center">
+  <div class="progress-bar progress-bar-striped active" role="progressbar"
+   style="width:0%">
+    0%
+  </div>
+</div>
+<%= link_to 'Show loan', @loan, class: "show" %>
+
+<%= javascript_tag "setInterval(\"ProgressBar.start('#{progress_url}')\",1000);" %>
+
+<%= javascript_tag "
+  var href = $('.show').attr('href');
+  console.log(href);
+" %>

@@ -1,0 +1,30 @@
+<h1 class="text-center">Listing Loans</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Loan Number</th>
+      <th>Borrower Name</th>
+      <th>Amount</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <% @loans.each do |loan| %>
+      <tr>
+        <td><%= loan.loan_number %></td>
+        <td><%= loan.borrower_name %></td>
+        <td><%= loan.principal_loan_amount %></td>
+        <td><%= loan.type_of_loan %></td>
+        <td><%= link_to 'Show', loan, class: 'btn btn-xs'%></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+
+</table>
+
+
+<a><%= link_to 'New Loan', new_loan_url, class: 'btn btn-primary' %></a>

@@ -1,0 +1,24 @@
+<div class="text-justify">
+  <h1 class="text-center">Loan Details</h1>
+  <p>
+    <strong>No:</strong>
+    <%= @loan.loan_number %>
+  </p>
+
+  <p>
+    <strong>Name: </strong>
+    <%= @loan.borrower_name %>
+  </p>
+
+  <p>
+    <strong>Amount:</strong>
+    <%= @loan.principal_loan_amount %>
+  </p>
+
+  <p>
+    <strong>Type:</strong>
+    <%= @loan.type_of_loan %>
+  </p>
+
+  <%= link_to 'Back', loans_url, class: 'btn btn-primary' %>
+</div>

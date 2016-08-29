@@ -1,0 +1,62 @@
+<div class="container">
+
+  <h1 class="text-center"> Loan Deatils </h1>
+  <%= form_for :loan, url: loans_url do |f| %>
+    <% if @loan.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@loan.errors.count, "error") %> prohibited this loan from being saved:</h2>
+
+        <ul>
+        <% @loan.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label "Name" %>
+      <%= f.text_field :borrower_name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :loan_number %>
+      <%= f.number_field :loan_number, class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :principal_loan_amount %>
+      <%= f.number_field :principal_loan_amount, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :closing_date %>
+      <%= f.date_field :closing_date, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :first_payment_date %>
+      <%= f.date_field :first_payment_date, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :interest_rate %>
+      <%= f.number_field :interest_rate, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :term %>
+      <%= f.number_field :term, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :type_of_loan %>
+      <%= f.radio_button :type_of_loan, 'Business Loan', :checked => true %> Business Loan
+      <%= f.radio_button :type_of_loan, 'Credit Builder Loan' %> Credit Builder Loan
+    </div>
+
+    <div class="actions">
+      <%= f.submit class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
