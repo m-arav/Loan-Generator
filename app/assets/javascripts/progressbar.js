@@ -8,7 +8,7 @@ var ProgressBar = {
         $('.progress-bar').text(data.message);
         $('.progress-bar').css('width', percent);
         if (data.percent == 100)
-          window.location.href = $('.show').attr('href');
+          window.location.href = $('.capture').attr('href');
       }
     });
   }

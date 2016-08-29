@@ -5,11 +5,11 @@
     0%
   </div>
 </div>
-<%= link_to 'Show loan', @loan, class: "show" %>
+<%= link_to 'Show loan', @loan, class: "capture hideButton" %>
 
 <%= javascript_tag "setInterval(\"ProgressBar.start('#{progress_url}')\",1000);" %>
 
 <%= javascript_tag "
-  var href = $('.show').attr('href');
+  var href = $('.capture').attr('href');
   console.log(href);
 " %>

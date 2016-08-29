@@ -20,5 +20,29 @@
     <%= @loan.type_of_loan %>
   </p>
 
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Balance</th>
+        <th>Next_payment_date</th>
+        <th>Principal_payment</th>
+        <th>End_balance</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% @schedule.each do |month| %>
+        <tr>
+          <td><%= month["balance"] %></td>
+          <td><%= month["next_payment_date"] %></td>
+          <td><%= month["principal_payment"] %></td>
+          <td><%= month["end_balance"] %></td>
+        </tr>
+      <% end %>
+
+    </tbody>
+
+  </table>
+
   <%= link_to 'Back', loans_url, class: 'btn btn-primary' %>
 </div>

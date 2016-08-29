@@ -4,7 +4,6 @@ class BackgroundJob
   def initialize
     # Instance variables
     @progress = 0
-
   end
 
   def run

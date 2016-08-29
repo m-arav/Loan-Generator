@@ -12,6 +12,7 @@ class LoansController < ApplicationController
   end
 
   def show
+    @schedule = @loan.generate_schedule
   end
 
   def create
